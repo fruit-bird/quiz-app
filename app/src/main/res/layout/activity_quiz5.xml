@@ -2,22 +2,22 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
     android:layout_margin="40dp"
-    tools:context=".Quiz1">
+    tools:context=".Quiz5">
 
     <ImageView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/q1"/>
-
+        android:src="@drawable/q5"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="A cette intersection, je laisse la priorité à droite :"
+        android:text="En conduisant, je peux utiliser mon portable pour écrire un texto ou composer un numéro :"
         android:textSize="20sp"
         android:layout_marginBottom="20sp"
         android:textStyle="bold"/>
@@ -48,4 +48,5 @@
         android:layout_height="wrap_content"
         android:text="Next"
         android:layout_marginTop="20dp"/>
+
 </LinearLayout>
