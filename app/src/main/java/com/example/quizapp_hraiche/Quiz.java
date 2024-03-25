@@ -14,14 +14,11 @@ import android.widget.Toast;
 import com.example.quizapp_hraiche.questions.Question;
 import com.example.quizapp_hraiche.questions.QuizLoader;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Random;
 
 public class Quiz extends AppCompatActivity {
     private static final String TAG = Quiz.class.getSimpleName();
-    private static final int MAX_QUESTIONS = 10;
 
     TextView tvQuestion;
     RadioGroup rgOptions;
@@ -65,9 +62,11 @@ public class Quiz extends AppCompatActivity {
                 Log.d(TAG, "Incorrect answer.\tScore: " + score);
             }
 
+            int maxQuestions = getResources().getInteger(R.integer.max_questions);
             int nextQuestionNumber = getIntent().getIntExtra("qst_num", 0) + 1;
-//            Log.d("Quiz1", "Next question number: " + nextQuestionNumber);
-            if (nextQuestionNumber == MAX_QUESTIONS) {
+//            Log.d(TAG, "Next question number: " + nextQuestionNumber);
+
+            if (nextQuestionNumber == maxQuestions) {
                 Intent resultsIntent = new Intent(this, Results.class);
                 resultsIntent.putExtra("score", score);
                 startActivity(resultsIntent);

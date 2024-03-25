@@ -13,47 +13,47 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/logoo"/>
+        android:src="@drawable/logoo"
+        android:contentDescription="@string/app_logo" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Votre score est :"
-        android:textSize="25dp"
+        android:text="@string/final_score"
+        android:textSize="25sp"
         android:textStyle="bold"
-        android:layout_gravity="center"
-        />
+        android:layout_gravity="center" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="50%"
-        android:textSize="40dp"
+        android:textSize="30sp"
         android:textStyle="bold"
         android:textColor="@color/material_dynamic_neutral10"
         android:layout_gravity="center"
-        android:id="@+id/tvScore"
-        />
-
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="match_parent"
-        android:layout_height="228dp" />
+        android:id="@+id/tvScore" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical">
+
         <Button
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:text="Logout"
-            android:id="@+id/bLogout"/>
+            android:text="@string/try_again"
+            android:id="@+id/bTryAgain" />
+
         <Button
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:text="Try again"
-            android:id="@+id/bTry"/>
+            android:text="@string/logout"
+            android:id="@+id/bLogout"
+            android:textSize="16sp"
+            style="?android:attr/buttonBarButtonStyle" />
+
     </LinearLayout>
+
 </LinearLayout>

@@ -57,13 +57,14 @@
         android:textSize="18sp"
         android:id="@+id/bRegister"/>
 
-    <TextView
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/already_have_an_account"
-        android:id="@+id/tvRegister"
+        android:id="@+id/bLogin"
         android:layout_gravity="center"
         android:textAlignment="center"
-        android:textSize="18sp"/>
+        android:textSize="16sp"
+        style="?android:attr/buttonBarButtonStyle" />
 
 </LinearLayout>

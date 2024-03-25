@@ -6,14 +6,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class Register extends AppCompatActivity {
     EditText etUsername, etEmail, etPassword, etConfirmPassword;
-    Button bRegister;
-    TextView tvRegister;
-
+    Button bRegister, bLogin;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +21,7 @@ public class Register extends AppCompatActivity {
         etPassword = findViewById(R.id.etPassword);
         etConfirmPassword = findViewById(R.id.etConfirmPassword);
         bRegister = findViewById(R.id.bRegister);
-        tvRegister = findViewById(R.id.tvRegister);
+        bLogin = findViewById(R.id.bLogin);
 
         bRegister.setOnClickListener(v -> {
             if (etUsername.getText().toString().isEmpty() || etEmail.getText().toString().isEmpty() || etPassword.getText().toString().isEmpty() || etConfirmPassword.getText().toString().isEmpty()) {
@@ -38,6 +35,6 @@ public class Register extends AppCompatActivity {
             startActivity(new Intent(this, Quiz.class));
         });
 
-        tvRegister.setOnClickListener(v -> startActivity(new Intent(this, Login.class)));
+        bLogin.setOnClickListener(v -> startActivity(new Intent(this, Login.class)));
     }
 }
