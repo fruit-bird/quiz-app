@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Register extends AppCompatActivity {
     EditText etUsername, etEmail, etPassword, etConfirmPassword;
@@ -26,9 +27,15 @@ public class Register extends AppCompatActivity {
         tvRegister = findViewById(R.id.tvRegister);
 
         bRegister.setOnClickListener(v -> {
-            if (etPassword.getText().toString().equals(etConfirmPassword.getText().toString())) {
-                startActivity(new Intent(Register.this, Quiz1.class));
+            if (etUsername.getText().toString().isEmpty() || etEmail.getText().toString().isEmpty() || etPassword.getText().toString().isEmpty() || etConfirmPassword.getText().toString().isEmpty()) {
+                Toast.makeText(getApplicationContext(), "Please fill in all fields", Toast.LENGTH_SHORT).show();
+                return;
             }
+            if (!etPassword.getText().toString().equals(etConfirmPassword.getText().toString())) {
+                Toast.makeText(getApplicationContext(), "Passwords do not match", Toast.LENGTH_SHORT).show();
+                return;
+            }
+            startActivity(new Intent(this, Quiz.class));
         });
 
         tvRegister.setOnClickListener(v -> startActivity(new Intent(this, Login.class)));

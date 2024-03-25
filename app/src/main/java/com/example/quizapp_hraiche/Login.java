@@ -33,7 +33,7 @@ public class Login extends AppCompatActivity {
         bLogin = findViewById(R.id.bLogin);
         tvLogin = findViewById(R.id.tvLogin);
 
-        bLogin.setOnClickListener(v -> startActivity(new Intent(Login.this, Quiz1.class)));
+        bLogin.setOnClickListener(v -> startActivity(new Intent(Login.this, Quiz.class)));
         tvLogin.setOnClickListener(v -> startActivity(new Intent(this, Register.class)));
     }
 }

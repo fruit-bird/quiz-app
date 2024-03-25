@@ -1,6 +1,10 @@
 package com.example.quizapp_hraiche.questions;
 
 import android.content.Context;
+import android.util.Log;
+
+import com.example.quizapp_hraiche.R;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -8,47 +12,50 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 public class QuizLoader {
-    private static List<Question> questions;
+    private static final String TAG = QuizLoader.class.getSimpleName();
 
-    public static List<Question> loadQuizQuestions(Context context, String fileName) {
-        if (questions == null) {
-            questions = new ArrayList<>();
+    public List<Question> loadQuestions(Context context) {
+        List<Question> questions = new ArrayList<>();
+        String json = loadJsonFromRaw(context);
+        if (json != null) {
             try {
-                // Read JSON file from assets directory
-                InputStream inputStream = context.getAssets().open(fileName);
-                int size = inputStream.available();
-                byte[] buffer = new byte[size];
-                inputStream.read(buffer);
-                inputStream.close();
-                String json = new String(buffer, "UTF-8");
+                JSONObject jsonObject = new JSONObject(json);
+                JSONArray jsonArray = jsonObject.getJSONArray("questions");
 
-                // Parse JSON data
-                JSONArray jsonArray = new JSONArray(json);
                 for (int i = 0; i < jsonArray.length(); i++) {
-                    JSONObject jsonObject = jsonArray.getJSONObject(i);
-                    String questionText = jsonObject.getString("question");
-                    JSONArray optionsArray = jsonObject.getJSONArray("options");
+                    JSONObject questionObject = jsonArray.getJSONObject(i);
+                    String questionText = questionObject.getString("question");
+                    JSONArray optionsArray = questionObject.getJSONArray("options");
                     List<String> options = new ArrayList<>();
                     for (int j = 0; j < optionsArray.length(); j++) {
                         options.add(optionsArray.getString(j));
                     }
-                    int correctAnswerIndex = jsonObject.getInt("correct_answer_index");
-                    questions.add(new Question(questionText, options, correctAnswerIndex));
+                    int correctAnswerIndex = questionObject.getInt("correct_answer_index");
+
+                    Question question = new Question(questionText, options, correctAnswerIndex);
+                    questions.add(question);
                 }
-            } catch (IOException | JSONException e) {
-                e.printStackTrace();
+            } catch (JSONException e) {
+                Log.e(TAG, "Error parsing JSON", e);
             }
         }
         return questions;
     }
 
-    public static Question getRandomQuestion(Context context, String fileName) {
-        List<Question> questions = loadQuizQuestions(context, fileName);
-        Random random = new Random();
-        return questions.get(random.nextInt(questions.size()));
+    private String loadJsonFromRaw(Context context) {
+        String json = null;
+        try {
+            InputStream is = context.getResources().openRawResource(R.raw.questions);
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+            json = new String(buffer, "UTF-8");
+        } catch (IOException e) {
+            Log.e(TAG, "Error reading JSON from raw resource", e);
+        }
+        return json;
     }
 }
-
