@@ -23,6 +23,7 @@ public class Register extends AppCompatActivity {
         etPassword = findViewById(R.id.etPassword);
         etConfirmPassword = findViewById(R.id.etConfirmPassword);
         bRegister = findViewById(R.id.bRegister);
+        tvRegister = findViewById(R.id.tvRegister);
 
         bRegister.setOnClickListener(v -> {
             if (etPassword.getText().toString().equals(etConfirmPassword.getText().toString())) {
@@ -30,6 +31,6 @@ public class Register extends AppCompatActivity {
             }
         });
 
-        tvRegister.setOnClickListener(v -> startActivity(new Intent(Register.this, MainActivity.class)));
+        tvRegister.setOnClickListener(v -> startActivity(new Intent(this, Login.class)));
     }
 }

@@ -2,45 +2,51 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".Login"
     android:orientation="vertical"
     android:layout_margin="40dp">
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/logo"/>
+        android:src="@drawable/logo"
+        android:contentDescription="@string/auth_image" />
 
     <EditText
         android:id="@+id/etEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:drawableLeft="@drawable/baseline_email_24"
-        android:hint="Email"/>
+        android:drawableStart="@drawable/baseline_email_24"
+        android:hint="@string/email"
+        android:autofillHints="emailAddress"
+        android:inputType="textEmailAddress" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Password"
+        android:hint="@string/password"
         android:id="@+id/etPassword"
         android:inputType="textPassword"
-        android:drawableLeft="@drawable/baseline_add_circle_outline_24"/>
+        android:drawableStart="@drawable/baseline_add_circle_outline_24"
+        android:autofillHints="password" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sign In"
+        android:text="@string/sign_in"
         android:textSize="18sp"
         android:id="@+id/bLogin"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sign Up"
-        android:id="@+id/tvRegister"
+        android:text="@string/don_t_have_an_account"
+        android:id="@+id/tvLogin"
         android:layout_gravity="center"
         android:textAlignment="center"
         android:textSize="18sp"/>
+
 </LinearLayout>
