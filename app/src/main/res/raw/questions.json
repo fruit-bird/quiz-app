@@ -1,53 +1,203 @@
 {
   "questions": [
     {
-      "question": "What is the capital of France?",
-      "options": ["London", "Paris", "Berlin", "Rome"],
+      "question": "What is the capital of Canada?",
+      "options": ["Toronto", "Ottawa", "Vancouver", "Montreal"],
       "correct_answer_index": 1
     },
     {
-      "question": "Who was the first president of the United States?",
-      "options": ["George Washington", "Thomas Jefferson", "Abraham Lincoln", "John Adams"],
+      "question": "Which river is the longest in the world?",
+      "options": ["Amazon", "Nile", "Mississippi", "Yangtze"],
       "correct_answer_index": 0
     },
     {
-      "question": "What is the largest desert in the world?",
-      "options": ["Gobi Desert", "Sahara Desert", "Arabian Desert", "Kalahari Desert"],
-      "correct_answer_index": 1
-    },
-    {
-      "question": "Which ancient wonder of the world was located in Egypt?",
-      "options": ["Great Wall of China", "Colosseum", "Taj Mahal", "Great Pyramid of Giza"],
-      "correct_answer_index": 3
-    },
-    {
-      "question": "Who wrote 'The Communist Manifesto'?",
-      "options": ["Karl Marx", "Friedrich Engels", "Vladimir Lenin", "Joseph Stalin"],
+      "question": "What is the tallest mountain in the world?",
+      "options": ["Mount Everest", "K2", "Kangchenjunga", "Lhotse"],
       "correct_answer_index": 0
     },
     {
-      "question": "Which ocean is the largest?",
+      "question": "What is the largest ocean on Earth?",
       "options": ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"],
       "correct_answer_index": 3
     },
     {
-      "question": "When did World War II end?",
-      "options": ["1945", "1918", "1939", "1941"],
+      "question": "Which continent is the largest by land area?",
+      "options": ["Africa", "Asia", "North America", "Antarctica"],
+      "correct_answer_index": 1
+    },
+    {
+      "question": "What is the capital of Australia?",
+      "options": ["Sydney", "Melbourne", "Canberra", "Perth"],
+      "correct_answer_index": 2
+    },
+    {
+      "question": "Which country is the southernmost point of Africa?",
+      "options": ["South Africa", "Lesotho", "Namibia", "Botswana"],
       "correct_answer_index": 0
     },
     {
-      "question": "What is the longest river in the world?",
+      "question": "What is the largest desert in the world?",
+      "options": ["Sahara Desert", "Arabian Desert", "Gobi Desert", "Kalahari Desert"],
+      "correct_answer_index": 0
+    },
+    {
+      "question": "Which river flows through the Grand Canyon?",
+      "options": ["Mississippi River", "Colorado River", "Amazon River", "Nile River"],
+      "correct_answer_index": 1
+    },
+    {
+      "question": "Which country is known as the 'Land of the Midnight Sun'?",
+      "options": ["Norway", "Sweden", "Finland", "Iceland"],
+      "correct_answer_index": 2
+    },
+    {
+      "question": "Which is the longest mountain range in the world?",
+      "options": ["Andes", "Rocky Mountains", "Himalayas", "Appalachian Mountains"],
+      "correct_answer_index": 0
+    },
+    {
+      "question": "What is the largest island in the world?",
+      "options": ["Greenland", "Australia", "Borneo", "Madagascar"],
+      "correct_answer_index": 0
+    },
+    {
+      "question": "Which country has the longest coastline?",
+      "options": ["Canada", "Australia", "China", "United States"],
+      "correct_answer_index": 0
+    },
+    {
+      "question": "What is the capital of Brazil?",
+      "options": ["Rio de Janeiro", "Sao Paulo", "Brasilia", "Belo Horizonte"],
+      "correct_answer_index": 2
+    },
+    {
+      "question": "Which is the largest lake in Africa?",
+      "options": ["Lake Victoria", "Lake Tanganyika", "Lake Malawi", "Lake Chad"],
+      "correct_answer_index": 0
+    },
+    {
+      "question": "What is the capital of Argentina?",
+      "options": ["Buenos Aires", "Santiago", "Rio de Janeiro", "Montevideo"],
+      "correct_answer_index": 0
+    },
+    {
+      "question": "Which country has the most active volcanoes?",
+      "options": ["Indonesia", "Japan", "Philippines", "Italy"],
+      "correct_answer_index": 0
+    },
+    {
+      "question": "What is the largest river by discharge volume?",
       "options": ["Amazon River", "Nile River", "Yangtze River", "Mississippi River"],
       "correct_answer_index": 0
     },
     {
-      "question": "Who was the first woman to fly solo across the Atlantic Ocean?",
-      "options": ["Amelia Earhart", "Bessie Coleman", "Harriet Quimby", "Jacqueline Cochran"],
+      "question": "Which country is the smallest by land area?",
+      "options": ["Vatican City", "Monaco", "San Marino", "Liechtenstein"],
       "correct_answer_index": 0
     },
     {
-      "question": "Which city is known as the 'Eternal City'?",
-      "options": ["Rome", "Athens", "Jerusalem", "Cairo"],
+      "question": "What is the capital of India?",
+      "options": ["New Delhi", "Mumbai", "Kolkata", "Chennai"],
+      "correct_answer_index": 0
+    },
+    {
+      "question": "Which is the highest waterfall in the world?",
+      "options": ["Niagara Falls", "Victoria Falls", "Angel Falls", "Iguaçu Falls"],
+      "correct_answer_index": 2
+    },
+    {
+      "question": "What is the largest city by population in the world?",
+      "options": ["Tokyo", "Shanghai", "Beijing", "Delhi"],
+      "correct_answer_index": 0
+    },
+    {
+      "question": "Which sea is the saltiest in the world?",
+      "options": ["Mediterranean Sea", "Dead Sea", "Red Sea", "Caspian Sea"],
+      "correct_answer_index": 1
+    },
+    {
+      "question": "What is the capital of South Korea?",
+      "options": ["Seoul", "Busan", "Incheon", "Daegu"],
+      "correct_answer_index": 0
+    },
+    {
+      "question": "Which is the world's largest coral reef system?",
+      "options": ["Great Barrier Reef", "Belize Barrier Reef", "Palawan Barrier Reef", "Red Sea Coral Reef"],
+      "correct_answer_index": 0
+    },
+    {
+      "question": "What is the longest river in Europe?",
+      "options": ["Volga", "Danube", "Rhine", "Loire"],
+      "correct_answer_index": 0
+    },
+    {
+      "question": "Which is the highest peak in Africa?",
+      "options": ["Mount Kilimanjaro", "Mount Kenya", "Mount Stanley", "Mount Meru"],
+      "correct_answer_index": 0
+    },
+    {
+      "question": "What is the capital of Spain?",
+      "options": ["Madrid", "Barcelona", "Seville", "Valencia"],
+      "correct_answer_index": 0
+    },
+    {
+      "question": "Which is the world's largest hot desert?",
+      "options": ["Sahara Desert", "Gobi Desert", "Kalahari Desert", "Great Victoria Desert"],
+      "correct_answer_index": 0
+    },
+    {
+      "question": "What is the northernmost capital city in the world?",
+      "options": ["Reykjavik", "Oslo", "Stockholm", "Helsinki"],
+      "correct_answer_index": 0
+    },
+    {
+      "question": "Which is the driest place on Earth?",
+      "options": ["Atacama Desert", "Sahara Desert", "McMurdo Dry Valleys", "Death Valley"],
+      "correct_answer_index": 2
+    },
+    {
+      "question": "What is the smallest ocean in the world?",
+      "options": ["Arctic Ocean", "Southern Ocean", "Indian Ocean", "Atlantic Ocean"],
+      "correct_answer_index": 1
+    },
+    {
+      "question": "Which river forms the border between the United States and Mexico?",
+      "options": ["Rio Grande", "Colorado River", "Mississippi River", "Columbia River"],
+      "correct_answer_index": 0
+    },
+    {
+      "question": "What is the capital of Egypt?",
+      "options": ["Cairo", "Alexandria", "Giza", "Luxor"],
+      "correct_answer_index": 0
+    },
+    {
+      "question": "Which country is known as the 'Land of the Thunder Dragon'?",
+      "options": ["Bhutan", "Nepal", "Tibet", "Myanmar"],
+      "correct_answer_index": 0
+    },
+    {
+      "question": "What is the largest bay in the world?",
+      "options": ["Hudson Bay", "Bay of Bengal", "Bay of Biscay", "Gulf of Mexico"],
+      "correct_answer_index": 0
+    },
+    {
+      "question": "Which country is known as the 'Land of a Thousand Lakes'?",
+      "options": ["Finland", "Norway", "Sweden", "Denmark"],
+      "correct_answer_index": 0
+    },
+    {
+      "question": "What is the world's largest country by land area?",
+      "options": ["China", "United States", "Russia", "Canada"],
+      "correct_answer_index": 2
+    },
+    {
+      "question": "Which is the highest capital city in the world?",
+      "options": ["La Paz", "Kathmandu", "Lhasa", "Quito"],
+      "correct_answer_index": 0
+    },
+    {
+      "question": "What is the capital of Argentina?",
+      "options": ["Buenos Aires", "Santiago", "Montevideo", "Brasilia"],
       "correct_answer_index": 0
     }
   ]

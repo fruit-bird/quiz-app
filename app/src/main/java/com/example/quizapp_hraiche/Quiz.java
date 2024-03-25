@@ -14,16 +14,19 @@ import android.widget.Toast;
 import com.example.quizapp_hraiche.questions.Question;
 import com.example.quizapp_hraiche.questions.QuizLoader;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
 public class Quiz extends AppCompatActivity {
     private static final String TAG = Quiz.class.getSimpleName();
-    private static final int MAX_QUESTIONS = 5;
+    private static final int MAX_QUESTIONS = 10;
 
     TextView tvQuestion;
     RadioGroup rgOptions;
     Button bNext;
+    List<Question> questions;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,12 +37,13 @@ public class Quiz extends AppCompatActivity {
         rgOptions = findViewById(R.id.rgOptions);
         bNext = findViewById(R.id.bNext);
 
-        // Setting the question and options
-        List<Question> questions = new QuizLoader().loadQuestions(this);
+        // Randomizing the order of questions
+        questions = new QuizLoader().loadQuestions(this);
+        Collections.shuffle(questions);
 
-        int index = new Random().nextInt(questions.size());
-        Question question = questions.get(index);
-        questions.remove(index);
+        int currQuestionIndex = getIntent().getIntExtra("qst_num", 0);
+        Question question = questions.get(currQuestionIndex);
+
         tvQuestion.setText(question.questionText);
         for (int i = 0; i < 4; i++) {
             RadioButton radioButton = (RadioButton) rgOptions.getChildAt(i);
@@ -56,13 +60,13 @@ public class Quiz extends AppCompatActivity {
             int score = getIntent().getIntExtra("score", 0);
             if (choice == question.correctAnswerIndex) {
                 score++;
-                Log.i(TAG, "Correct answer. Score: " + score);
+                Log.d(TAG, "Correct answer.\t\tScore: " + score);
             } else {
-                Log.i(TAG, "Incorrect answer. Score: " + score);
+                Log.d(TAG, "Incorrect answer.\tScore: " + score);
             }
 
             int nextQuestionNumber = getIntent().getIntExtra("qst_num", 0) + 1;
-//            Log.i("Quiz1", "Next question number: " + nextQuestionNumber);
+//            Log.d("Quiz1", "Next question number: " + nextQuestionNumber);
             if (nextQuestionNumber == MAX_QUESTIONS) {
                 Intent resultsIntent = new Intent(this, Results.class);
                 resultsIntent.putExtra("score", score);
