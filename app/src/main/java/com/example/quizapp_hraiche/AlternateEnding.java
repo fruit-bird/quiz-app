@@ -1,5 +1,6 @@
 package com.example.quizapp_hraiche;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.Toast;
@@ -14,6 +15,8 @@ public class AlternateEnding extends AppCompatActivity {
 
     Button bEnd1, bEnd2;
 
+    private MediaPlayer mediaPlayer;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,5 +27,23 @@ public class AlternateEnding extends AppCompatActivity {
 
         bEnd1.setOnClickListener(v -> Toast.makeText(getApplicationContext(), "-100 Social Credits", Toast.LENGTH_SHORT).show());
         bEnd2.setOnClickListener(v -> Toast.makeText(getApplicationContext(), "-1,000 Social Credits", Toast.LENGTH_SHORT).show());
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        mediaPlayer = MediaPlayer.create(this, R.raw.red_circle);
+        mediaPlayer.setLooping(true);
+        mediaPlayer.start();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if (mediaPlayer != null) {
+            mediaPlayer.release();
+            mediaPlayer = null;
+        }
     }
 }
