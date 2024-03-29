@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "697390294703",
+    "project_id": "quizapp-hraiche",
+    "storage_bucket": "quizapp-hraiche.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:697390294703:android:91c875a93bbcbbb6ef565a",
+        "android_client_info": {
+          "package_name": "com.example.quizapp_hraiche"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNRCdVpDI_jvYSw66aQXh6YArMv4shDrM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

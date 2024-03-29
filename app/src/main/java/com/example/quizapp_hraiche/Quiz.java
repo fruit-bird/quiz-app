@@ -20,6 +20,7 @@ import java.util.List;
 public class Quiz extends AppCompatActivity {
     private static final String TAG = Quiz.class.getSimpleName();
 
+//    1. declaration
     TextView tvQuestion;
     RadioGroup rgOptions;
     Button bNext;
@@ -30,6 +31,7 @@ public class Quiz extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
 
+//        2. recup des ids
         tvQuestion = findViewById(R.id.tvQuestion);
         rgOptions = findViewById(R.id.rgOptions);
         bNext = findViewById(R.id.bNext);
@@ -47,6 +49,7 @@ public class Quiz extends AppCompatActivity {
             radioButton.setText(question.options.get(i));
         }
 
+//        3. associer des listener
         bNext.setOnClickListener(v -> {
             if (rgOptions.getCheckedRadioButtonId() == -1) {
                 Toast.makeText(getApplicationContext(), R.string.no_answer_given, Toast.LENGTH_SHORT).show();
