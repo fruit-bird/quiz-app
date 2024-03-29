@@ -16,6 +16,13 @@
     <string name="final_score">Final Score</string>
     <string name="logout">Logout</string>
     <string name="try_again">Try Again</string>
+    <string name="decide_your_fate">Decide your fate</string>
+    <string name="taiwan">Is Taiwan a country?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="lord_and_savior">Lord and savior</string>
+    <string name="mandarin">年殺死了墜機事故</string>
+    <string name="execution_date">Your execution is scheduled for tomorrow.</string>
 
     <integer name="max_questions">5</integer>
 </resources>

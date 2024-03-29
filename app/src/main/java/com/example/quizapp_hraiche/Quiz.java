@@ -16,6 +16,7 @@ import com.example.quizapp_hraiche.questions.QuizLoader;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.Random;
 
 public class Quiz extends AppCompatActivity {
     private static final String TAG = Quiz.class.getSimpleName();
@@ -70,10 +71,18 @@ public class Quiz extends AppCompatActivity {
 //            Log.d(TAG, "Next question number: " + nextQuestionNumber);
 
             if (nextQuestionNumber == maxQuestions) {
-                Intent resultsIntent = new Intent(this, Results.class);
-                resultsIntent.putExtra("score", score);
-                startActivity(resultsIntent);
-                finish();
+                Random random = new Random();
+                if (random.nextBoolean()) {
+                    Intent bonusQuizIntent = new Intent(this, BonusQuiz.class);
+                    bonusQuizIntent.putExtra("score", score);
+                    startActivity(bonusQuizIntent);
+                    finish();
+                } else {
+                    Intent resultsIntent = new Intent(this, Results.class);
+                    resultsIntent.putExtra("score", score);
+                    startActivity(resultsIntent);
+                    finish();
+                }
             } else {
                 Intent nextQuestionIntent = new Intent(this, Quiz.class);
                 nextQuestionIntent.putExtra("score", score);
